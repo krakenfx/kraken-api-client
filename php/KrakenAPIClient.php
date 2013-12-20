@@ -101,7 +101,7 @@ class KrakenAPI
     /**
      * Query private methods
      *
-     * @param string $path method path
+     * @param string $method method path
      * @param array $request request parameters
      * @return array request result on success
      * @throws KrakenAPIException
