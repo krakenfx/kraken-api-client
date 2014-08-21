@@ -279,7 +279,7 @@ $res = $kraken->QueryPrivate('AddOrder', array(
     'pair' => 'XBTCZEUR', 
     'type' => 'buy', 
     'ordertype' => 'market', 
-    'flags' => 'viqc',
+    'oflags' => 'viqc',
     'volume' => '300', 
     'starttm' => '1376299642' 
 ));
