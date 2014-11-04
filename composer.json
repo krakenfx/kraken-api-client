@@ -7,5 +7,5 @@
   "autoload": {
     "psr-0": { "Kraken\\KrakenAPI": "" }
   },
-  "target-dir": "Kraken/KrakenAPI"
+  "target-dir": "payward/KrakenAPI"
 }
