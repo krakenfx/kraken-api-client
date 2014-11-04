@@ -1,5 +1,5 @@
 {
-  "name": "ddall/kraken-php-api",
+  "name": "payward/kraken-php-api",
   "type": "library",
   "description": "PHP Api for Kraken.com",
   "keywords": ["kraken"],
