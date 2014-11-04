@@ -1,14 +1,11 @@
 {
-"name": "kraken/kraken-php-api",
-"type": "library",
-"description": "Simple API for Kraken.com",
-"keywords": ["kraken"],
-"license": "MIT",
-"require": {
-"php": ">=5.2.1"
-},
-"autoload": {
-"psr-0": { "Kraken\\KrakenAPI": "" }
-},
-"target-dir": "Kraken/KrakenAPI"
+  "name": "ddall/kraken-php-api",
+  "type": "library",
+  "description": "PHP Api for Kraken.com",
+  "keywords": ["kraken"],
+  "license": "MIT",
+  "autoload": {
+    "psr-0": { "Kraken\\KrakenAPI": "" }
+  },
+  "target-dir": "Kraken/KrakenAPI"
 }
