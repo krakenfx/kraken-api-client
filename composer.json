@@ -5,6 +5,6 @@
   "keywords": ["kraken"],
   "license": "MIT",
   "autoload": {
-    "psr-4": { "payward\\": "php/" }
+    "classmap": ["php/KrakenAPIClient.php"]
   }
 }
