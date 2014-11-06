@@ -1,4 +1,6 @@
 <?php
+
+namespace Payward;
 /**
  * Reference implementation for Kraken's REST API.
  *
