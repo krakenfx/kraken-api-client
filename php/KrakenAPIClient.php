@@ -30,7 +30,7 @@ namespace Payward;
  * THE SOFTWARE.
  */
 
-class KrakenAPIException extends ErrorException {};
+class KrakenAPIException extends \ErrorException {};
 
 class KrakenAPI
 {
