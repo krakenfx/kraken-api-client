@@ -5,7 +5,6 @@
   "keywords": ["kraken"],
   "license": "MIT",
   "autoload": {
-    "psr-0": { "Kraken\\KrakenAPI": "" }
+    "psr-0": { "payward\\": "php/" }
   },
-  "target-dir": "payward/KrakenAPI"
 }
