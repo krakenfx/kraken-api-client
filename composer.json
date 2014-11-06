@@ -6,5 +6,5 @@
   "license": "MIT",
   "autoload": {
     "psr-0": { "payward\\": "php/" }
-  },
+  }
 }
