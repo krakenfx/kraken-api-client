@@ -12,13 +12,13 @@ require_once 'KrakenAPIClient.php';
 $key = 'YOUR API KEY';
 $secret = 'YOUR API SECRET';
 
-// set which platform to use (currently only beta is operational, live available soon)
-$beta = true; 
+// set which platform to use (beta or standard)
+$beta = false; 
 $url = $beta ? 'https://api.beta.kraken.com' : 'https://api.kraken.com';
 $sslverify = $beta ? false : true;
 $version = 0;
 
-$kraken = new KrakenAPI($key, $secret, $url, $version, $sslverify);
+$kraken = new \Payward\KrakenAPI($key, $secret, $url, $version, $sslverify);
 
 // Query a public list of active assets and their properties: 
 $res = $kraken->QueryPublic('Assets');
