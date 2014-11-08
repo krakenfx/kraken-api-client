@@ -9,7 +9,7 @@ namespace Payward;
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2013 Payward, Inc
+ * Copyright (c) 2014 Payward, Inc
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -39,6 +39,12 @@ class KrakenAPI
     protected $url;     // API base URL
     protected $version; // API version
     protected $curl;    // curl handle
+
+    /* check we have curl */
+    if(!function_exists('curl_init')) {
+     print "[ERROR] The Kraken API client requires that PHP is compiled with 'curl' support.\n";
+     exit(1);
+    }
 
     /**
      * Constructor for KrakenAPI
