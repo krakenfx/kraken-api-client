@@ -75,7 +75,9 @@ class KrakenAPI
 
     function __destruct()
     {
-        curl_close($this->curl);
+    	if(function_exists('curl_close')) {
+         curl_close($this->curl);
+	}
     }
 
     /**
