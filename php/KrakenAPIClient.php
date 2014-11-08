@@ -1,4 +1,6 @@
 <?php
+
+namespace Payward;
 /**
  * Reference implementation for Kraken's REST API.
  *
@@ -28,7 +30,7 @@
  * THE SOFTWARE.
  */
 
-class KrakenAPIException extends ErrorException {};
+class KrakenAPIException extends \ErrorException {};
 
 class KrakenAPI
 {
