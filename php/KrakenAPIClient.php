@@ -40,12 +40,6 @@ class KrakenAPI
     protected $version; // API version
     protected $curl;    // curl handle
 
-    /* check we have curl */
-    if(!function_exists('curl_init')) {
-     print "[ERROR] The Kraken API client requires that PHP is compiled with 'curl' support.\n";
-     exit(1);
-    }
-
     /**
      * Constructor for KrakenAPI
      *
@@ -57,6 +51,13 @@ class KrakenAPI
      */
     function __construct($key, $secret, $url='https://api.kraken.com', $version='0', $sslverify=true)
     {
+
+        /* check we have curl */
+        if(!function_exists('curl_init')) {
+         print "[ERROR] The Kraken API client requires that PHP is compiled with 'curl' support.\n";
+         exit(1);
+        }
+
         $this->key = $key;
         $this->secret = $secret;
         $this->url = $url;
