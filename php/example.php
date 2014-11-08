@@ -4,6 +4,8 @@
  *
  * See https://www.kraken.com/help/api for more info.
  *
+ * Note that this implementation requires PHP with 'curl' support compiled in.
+ *
  */
 
 require_once 'KrakenAPIClient.php'; 
