@@ -101,6 +101,11 @@ class KrakenAPI
         if($result===false)
             throw new KrakenAPIException('CURL error: ' . curl_error($this->curl));
 
+        // verify http code
+        $http_code = curl_getinfo($this->curl, CURLINFO_HTTP_CODE);
+        if($http_code>=400)
+            throw new KrakenAPIException('HTTP code: ' . $http_code);
+
         // decode results
         $result = json_decode($result, true);
         if(!is_array($result))
@@ -144,6 +149,11 @@ class KrakenAPI
         $result = curl_exec($this->curl);
         if($result===false)
             throw new KrakenAPIException('CURL error: ' . curl_error($this->curl));
+
+        // verify http code
+        $http_code = curl_getinfo($this->curl, CURLINFO_HTTP_CODE);
+        if($http_code>=400)
+            throw new KrakenAPIException('HTTP code: ' . $http_code);
 
         // decode results
         $result = json_decode($result, true);
