@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Payward;
 
+use Payward\Exception\InvalidArgumentException;
 use Payward\Exception\RuntimeException;
 
 /**
@@ -60,6 +61,11 @@ class KrakenClient
         }
 
         $this->key = $key;
+        $secret = \base64_decode($secret, true);
+        if (false === $secret) {
+            throw new InvalidArgumentException('Invalid API secret given');
+        }
+
         $this->secret = $secret;
         $this->url = $url;
         $this->version = $version;
@@ -144,7 +150,7 @@ class KrakenClient
         $sign = \hash_hmac(
             'sha512',
             $path.\hash('sha256', $request['nonce'].$postdata, true),
-            \base64_decode($this->secret, true),
+            $this->secret,
             true
         );
         $headers = [
