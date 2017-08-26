@@ -1,0 +1,6 @@
+parameters:
+    excludes_analyse:
+    - build/
+    - src/dockerfile/vendor/
+    - src/dockerfile-builder/vendor/
+    - vendor/
