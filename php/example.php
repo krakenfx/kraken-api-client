@@ -37,7 +37,7 @@ print_r($res);
  * 
  *     [result] => Array
  *         (
- *             [XBTC] => Array
+ *             [XXBT] => Array
  *                 (
  *                     [aclass] => currency
  *                     [altname] => BTC
@@ -73,7 +73,7 @@ print_r($res);
  */
 
 // Query public ticker info for BTC/USD pair:
-$res = $kraken->QueryPublic('Ticker', array('pair' => 'XBTCZUSD'));
+$res = $kraken->QueryPublic('Ticker', array('pair' => 'XXBTZUSD'));
 print_r($res);
 
 /**
@@ -87,7 +87,7 @@ print_r($res);
  * 
  *     [result] => Array
  *         (
- *             [XBTCZUSD] => Array
+ *             [XXBTZUSD] => Array
  *                 (
  *                     [a] => Array
  *                         (
@@ -119,7 +119,7 @@ print_r($res);
  *       and it may no longer be representative of a timestamp. The best practice is to base it
  *       on the 'last' value returned in the result set. 
  */
-$res = $kraken->QueryPublic('Trades', array('pair' => 'XBTCZEUR', 'since' => '137589964200000000'));
+$res = $kraken->QueryPublic('Trades', array('pair' => 'XXBTZEUR', 'since' => '137589964200000000'));
 print_r($res);
 
 /**
@@ -133,7 +133,7 @@ print_r($res);
  * 
  *     [result] => Array
  *         (
- *             [XBTCZEUR] => Array
+ *             [XXBTZEUR] => Array
  *                 (
  *                     [0] => Array
  *                         (
@@ -187,7 +187,7 @@ print_r($res);
  *         (
  *             [ZUSD] => 3415.8014
  *             [ZEUR] => 155.5649
- *             [XBTC] => 149.9688412800
+ *             [XXBT] => 149.9688412800
  *             [XXRP] => 499889.51600000
  *         )
  * 
@@ -241,7 +241,7 @@ print_r($res);
 
 // Add a standard order: sell 1.123 BTC/USD @ limit $120 
 $res = $kraken->QueryPrivate('AddOrder', array(
-    'pair' => 'XBTCZUSD', 
+    'pair' => 'XXBTZUSD',
     'type' => 'sell', 
     'ordertype' => 'limit', 
     'price' => '120', 
@@ -278,7 +278,7 @@ print_r($res);
 
 // Add a standard order: buy €300 worth of BTC at market at 2013-08-12T09:27:22+0000 
 $res = $kraken->QueryPrivate('AddOrder', array(
-    'pair' => 'XBTCZEUR', 
+    'pair' => 'XXBTZEUR',
     'type' => 'buy', 
     'ordertype' => 'market', 
     'oflags' => 'viqc',
@@ -320,7 +320,7 @@ print_r($res);
  +$10 price increase (signed stop/loss prices determined automatically using # notation): 
 */
 $res = $kraken->QueryPrivate('AddOrder', array(
-    'pair' => 'XBTCZUSD',
+    'pair' => 'XXBTZUSD',
     'type' => 'buy',
     'ordertype' => 'limit',
     'price' => '101.9901', 
